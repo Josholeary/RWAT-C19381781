@@ -1,0 +1,18 @@
+body {
+    background-color: #FFFDD0;
+    color: grey;
+    text-align: center;
+}
+
+h1 {
+    font-size: 450%;
+    padding-top: 25%;
+    text-decoration: underline;
+}
+
+input[type=button] {
+    background-color: gray;
+    color: #FFFDD0;
+    font-size: 135%;
+    width: 30%;
+}
