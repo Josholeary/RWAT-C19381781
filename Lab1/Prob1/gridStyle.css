@@ -11,7 +11,7 @@ body {
     color: gray;
     text-align: center;
     font-size: 150%;
-    width: 24.86%;
+    flex-grow: 0.25;
     border: 1px solid black;
   }
   
