@@ -1,0 +1,28 @@
+body { 
+    background-color:  #FFFDD0;
+}
+
+.row {
+    display: flex; 
+    flex-wrap: wrap;
+  }
+  
+.col {
+    color: gray;
+    text-align: center;
+    font-size: 150%;
+    width: 24.86%;
+    border: 1px solid black;
+  }
+  
+@media (max-width: 720px) {
+    .col {
+      width: calc(50% - 2px)
+    }
+  }
+  
+@media (max-width: 360px) {
+    .col {
+      width: calc(100% - 2px)
+    }
+  }
