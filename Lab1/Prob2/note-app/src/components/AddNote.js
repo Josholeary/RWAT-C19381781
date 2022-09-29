@@ -1,25 +1,34 @@
 import { useState } from "react";
 
-const AddNote = () => {
+const AddNote = ({saveNoteHandler}) => {
     const [noteTitle, setNoteTitle] = useState('');
     const [noteText, setNoteText] = useState('');
 
     const titleHandler = (event) => {
-        console.log(event.target.value);
-    }
+        setNoteTitle(event.target.value);
+    };
 
     const textHandler = (event) => {
-        console.log(event.target.value);
-    }
+        setNoteText(event.target.value);
+    };
 
     const colourHandler = (event) => {
         console.log(event.target.value);
+    };
+
+    const saveHandler = () => {
+        if(noteText.trim().length > 0 || noteTitle.trim().length > 0)
+        {
+            saveNoteHandler(noteTitle,noteText);
+            setNoteTitle('');
+            setNoteText('');
+        }
     }
 
     return(
         <div className="note add-note">
-            <input type="text" placeholder="Note Title" id="noteTitle" onChange={titleHandler} name="noteTitle"></input> 
-            <textarea cols="10" rows="10" onChange={textHandler} placeholder="Note Text"></textarea>
+            <input type="text" placeholder="Note Title" id="noteTitle" value={noteTitle} onChange={titleHandler} name="noteTitle"></input> 
+            <textarea cols="10" rows="10" value={noteText} onChange={textHandler} placeholder="Note Text"></textarea>
 
             <div className="noteControls">
 
@@ -30,7 +39,7 @@ const AddNote = () => {
                     <option value="blue">Blue</option>
                 </select>
 
-                <button className="add"> Add Note </button>
+                <button className="add" onClick={saveHandler}> Add Note </button>
             </div>
             </div>
     );

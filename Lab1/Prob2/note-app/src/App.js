@@ -20,9 +20,20 @@ const App = () => {
     noteText: "Note Text",
   }
 ]);
+
+  const saveNote =  (title, text) => {
+      const newNote = {
+        id: nanoid(),
+        noteTitle: title,
+        noteText: text
+      }
+      const notesArr = [...notes, newNote];
+      setNotes(notesArr);
+  }
+
   return (
     <div className="container">
-        <AllNotes notes={notes} />
+        <AllNotes notes={notes} saveNoteHandler={saveNote} />
     </div>
   );
 };
