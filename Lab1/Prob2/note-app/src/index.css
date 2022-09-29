@@ -11,3 +11,99 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container {
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+  margin: auto;
+  max-width: 95%;
+}
+
+.note {
+  background-color: #CBC3E3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 2%;
+  text-align: center;
+  padding: 1%;
+  padding-top: 5%;
+  margin-top: 1%;
+  min-height: 120px;
+}
+
+.note.add-note {
+  background-color: #FFD580;
+}
+
+input[type="text"]
+{
+  border: 1px solid black;
+  background-color: transparent;
+}
+
+textarea {
+  border: 1px solid black;
+  background-color: transparent;
+  resize: none;
+}
+
+.add {
+  background-color: #f8f8f8;
+  border-radius: 15px;
+  border: none;
+  padding: 2%;
+  margin: 1%;
+}
+
+.add:hover {
+  background-color: #d3d3d3;
+}
+
+.colorSel {
+  background-color: #f8f8f8;
+  border-radius: 15px;
+  border: none;
+  padding: 2%;
+  margin: 1%;
+}
+
+.all-notes {
+  display: grid;
+  grid-gap: 1%;
+  grid-template-columns: repeat(auto-fit, 17.5%);
+}
+
+.noteControls {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit {
+  background-color: #f8f8f8;
+  border-radius: 15px;
+  border: none;
+  padding: 2%;
+  padding-left: 4%;
+  padding-right: 4%;
+  margin: 1%;
+}
+
+.edit:hover {
+  background-color: #d3d3d3;
+}
+
+.delete {
+  background-color: #f8f8f8;
+  border-radius: 15px;
+  border: none;
+  padding: 2%;
+  padding-left: 4%;
+  padding-right: 4%;
+  margin: 1%;
+}
+
+.delete:hover {
+  background-color: #d3d3d3;
+}

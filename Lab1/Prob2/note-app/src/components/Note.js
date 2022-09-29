@@ -1,10 +1,14 @@
-const Note = () => {
+const Note = ({id, noteTitle, noteText}) => {
     return (
         <div className="note">
-            <div className="noteTitle"> Note Title </div>
-            <span> Note text </span>
-            <div className="noteEdit"> Edit </div>
-            <div className="noteDelete"> Delete </div>
+            <div className="noteTitle"> {noteTitle} </div>
+            <div className ="NoteText">
+                <span> {noteText} </span>
+            </div>
+            <div className="noteControls">
+                <button className="edit">Edit</button>
+                <button className="delete">Delete</button>
+            </div>
         </div>
     )
 }
