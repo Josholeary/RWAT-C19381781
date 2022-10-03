@@ -14,13 +14,13 @@ const App = () => {
     id: nanoid(),
     noteTitle: "Note Title 2",
     noteText: "Note Text",
-    noteColour: "green"
+    noteColour: "blue"
   },
   {
     id: nanoid(),
     noteTitle: "Note Title 3",
     noteText: "Note Text",
-    noteColour: "blue"
+    noteColour: "green"
   }
 ]);
 
@@ -32,6 +32,7 @@ const App = () => {
         noteColour: colour
       }
       const notesArr = [...notes, newNote];
+      console.log(notesArr);
       setNotes(notesArr);
   }
 

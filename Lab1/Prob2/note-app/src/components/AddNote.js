@@ -34,7 +34,7 @@ const AddNote = ({saveNoteHandler}) => {
 
             <div className="noteControls">
 
-                <select className="colorSel" id="color" onChange={colourHandler} name="color">
+                <select className="colorSel" id="color" value={noteColour} onChange={colourHandler} name="noteColor">
                     <option value="" selected disabled>Colour</option>
                     <option value="red">Red</option>
                     <option value="green">Green</option>
