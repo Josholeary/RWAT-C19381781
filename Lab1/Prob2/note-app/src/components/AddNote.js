@@ -3,6 +3,7 @@ import { useState } from "react";
 const AddNote = ({saveNoteHandler}) => {
     const [noteTitle, setNoteTitle] = useState('');
     const [noteText, setNoteText] = useState('');
+    const [noteColour, setNoteColour] = useState('')
 
     const titleHandler = (event) => {
         setNoteTitle(event.target.value);
@@ -13,15 +14,16 @@ const AddNote = ({saveNoteHandler}) => {
     };
 
     const colourHandler = (event) => {
-        console.log(event.target.value);
+        setNoteColour(event.target.value);
     };
 
     const saveHandler = () => {
-        if(noteText.trim().length > 0 || noteTitle.trim().length > 0)
+        if(noteText.trim().length > 0 && noteTitle.trim().length > 0)
         {
-            saveNoteHandler(noteTitle,noteText);
+            saveNoteHandler(noteTitle,noteText,noteColour);
             setNoteTitle('');
             setNoteText('');
+            setNoteColour('');
         }
     }
 
@@ -33,7 +35,7 @@ const AddNote = ({saveNoteHandler}) => {
             <div className="noteControls">
 
                 <select className="colorSel" id="color" onChange={colourHandler} name="color">
-                    <option value="" disabled selected>Colour</option>
+                    <option value="" selected disabled>Colour</option>
                     <option value="red">Red</option>
                     <option value="green">Green</option>
                     <option value="blue">Blue</option>
