@@ -4,24 +4,6 @@ import AllNotes from "./components/AllNotes";
 
 const App = () => {
   const [notes, setNotes] = useState([
-    {
-    id: nanoid(),
-    noteTitle: "Note Title 1",
-    noteText: "Note Text",
-    noteColour: "red"
-  },
-  {
-    id: nanoid(),
-    noteTitle: "Note Title 2",
-    noteText: "Note Text",
-    noteColour: "blue"
-  },
-  {
-    id: nanoid(),
-    noteTitle: "Note Title 3",
-    noteText: "Note Text",
-    noteColour: "green"
-  }
 ]);
 
   const saveNote =  (title, text, colour) => {

@@ -18,7 +18,7 @@ const AddNote = ({saveNoteHandler}) => {
     };
 
     const saveHandler = () => {
-        if(noteText.trim().length > 0 && noteTitle.trim().length > 0)
+        if(noteText.trim().length > 0 && noteTitle.trim().length > 0 && noteColour.trim().length > 0)
         {
             saveNoteHandler(noteTitle,noteText,noteColour);
             setNoteTitle('');
