@@ -29,8 +29,8 @@ const AddNote = ({saveNoteHandler}) => {
 
     return(
         <div className="note add-note">
-            <input type="text" placeholder="Note Title" id="noteTitle" value={noteTitle} onChange={titleHandler} name="noteTitle"></input> 
-            <textarea cols="10" rows="10" value={noteText} onChange={textHandler} placeholder="Note Text"></textarea>
+            <input type="text" placeholder="Enter note title here" id="noteTitle" value={noteTitle} onChange={titleHandler} name="noteTitle"></input> 
+            <textarea cols="10" rows="10" value={noteText} onChange={textHandler} placeholder="Enter note text here"></textarea>
 
             <div className="noteControls">
 
