@@ -1,11 +1,19 @@
-# Repository for Rich Web Application Tech module as a part of TU856/4
- 
- https://github.com/Josholeary/RWAT-C19381781
+# Rich Web Application Tech TU856/4
+
+https://github.com/Josholeary/RWAT-C19381781
+
+# Projects:
 
 ## Intro:
-* Basic Hello World program with light and dark mode to incorporate JS
+
+- Basic program with light and dark mode to incorporate JS
 
 ## Lab1:
-* Problem 1, Flexible Grid using HTML and CSS
-* Problem 2, NoteApp with edit, delete and colour selection
-* Problem 3, Chrome extension functionality exploration
+
+- Flexible Grid using HTML and CSS
+- NoteApp using React with the ability to edit, copy, delete and select colour of your notes
+- Chrome extension functionality exploration with JS
+
+## Lab2:
+
+- Phone Directory using React allowing users to add contacts and search for them
