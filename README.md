@@ -2,7 +2,7 @@
 
 https://github.com/Josholeary/RWAT-C19381781
 
-# Projects:
+# Project Folders:
 
 ## Intro:
 
