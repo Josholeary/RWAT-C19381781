@@ -1,10 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: serif;
 }
 
 code {
@@ -12,9 +8,10 @@ code {
     monospace;
 }
 
-h1 {
+h1, h2 {
   text-align: center;
 }
+
 
 .contactForm {
   background-color: #ADD8E6;
@@ -28,6 +25,20 @@ h1 {
 .contactForm input {
   margin: 5% 1% 5%;
   font-size: 140%;
+}
+
+.contactForm button {
+  font-size: 140%;
+}
+
+.contactSearch {
+  text-align: center;
+  margin: 5%;
+  font-size: 150%;
+}
+
+.contactSearch input {
+  font-size: 100%;
 }
 
 .contactTable {

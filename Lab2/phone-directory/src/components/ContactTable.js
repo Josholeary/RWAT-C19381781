@@ -1,4 +1,6 @@
-const ContactTable = () => {
+import ContactRow from "./ContactRow";
+
+const ContactTable = ({ contacts }) => {
   return (
     <div className="contactTable">
       <table>
@@ -7,26 +9,14 @@ const ContactTable = () => {
           <th>Mobile</th>
           <th>Email</th>
         </tr>
-        <tr>
-          <td>Joe Blogs</td>
-          <td> 08508508508</td>
-          <td> Jblog@magicmail.com </td>
-        </tr>
-        <tr>
-          <td>Joe Blogs</td>
-          <td> 08508508508</td>
-          <td> Jblog@magicmail.com </td>
-        </tr>
-        <tr>
-          <td>Joe Blogs</td>
-          <td> 08508508508</td>
-          <td> Jblog@magicmail.com </td>
-        </tr>
-        <tr>
-          <td>Joe Blogs</td>
-          <td> 08508508508</td>
-          <td> Jblog@magicmail.com </td>
-        </tr>
+        {contacts.map((contacts) => (
+          <ContactRow
+            id={contacts.id}
+            cname={contacts.cname}
+            cnumber={contacts.cnumber}
+            cmail={contacts.cmail}
+          />
+        ))}
       </table>
     </div>
   );
