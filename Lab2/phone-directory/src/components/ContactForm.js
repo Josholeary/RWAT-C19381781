@@ -21,7 +21,9 @@ const ContactForm = ({ contactHandler }) => {
     if (
       contName.trim().length > 0 &&
       contNum.trim().length > 0 &&
-      contMail.trim().length > 0
+      contMail.trim().length > 0 &&
+      !isNaN(contNum) &&
+      isNaN(contName)
     ) {
       contactHandler(contName, contNum, contMail);
       setContName("");

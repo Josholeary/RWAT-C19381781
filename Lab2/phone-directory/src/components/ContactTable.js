@@ -49,7 +49,6 @@ const ContactTable = ({ contacts }) => {
           )}
         </table>
       </div>
-      )}
     </div>
   );
 };
