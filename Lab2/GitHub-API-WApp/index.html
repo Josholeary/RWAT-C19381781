@@ -2,53 +2,65 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>GitHub API Web App</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="GH.css">
+        <script src="contentFetch.js"></script>
     </head>
     <body>
-        <div class="container">
+            <h1> GitHub API Profile Search </h1>
 
             <div class="search">
-                <input type="text" placeholder="Username" name="username">
-                <button onclick="search()"> Search </button>
+                <input type="text" id="username" placeholder="Username" name="username">
+                <button id="search" onclick="search()"> Search </button>
             </div>         
 
-                <div class="tab">
-                    <h1> User Profile</h1>
-                    <table>
+            <h2 id="greeting"> Enter a GitHub Username in the search bar to find out more about them </h2>
+                <div class="profile">
+                    <h1 id="profHead"> User Profile</h1>
+                    <table id="profileTable">
                         <tr>
                             <td>
-                                <img src="/Users/josholeary/Downloads/luffy.jpg">
+                                <img src="" id="profilePic">
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <p> Name </p>
+                                <p> Name: </p>
+                                <p id="name"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p> Username: </p>
+                                <p id="uname"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p> Email: </p>
+                                <p id="email"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p> Location: </p>
+                                <p id="location"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p> Number of Gists: </p>
+                                <p id="gists"></p>
                             </td>
                         </tr>
                     </table>    
                 </div>
-
-                <div class="tab">
-                    <h1> User Repos</h1>
-                    <table>
-                        <tr>
-                            <td>
-                                <p> Repo 1 </p>
-                            </td>
-                        </tr>   
-                        <tr>
-                            <td>
-                                <p> Repo 2 </p>
-                            </td>
-                        </tr>
-                    </table>    
+        
+                <div class="repos">
+                        <h1 id="repHead"> User Repos</h1>
+                        <table id="repoTable">
+                        </table>    
                 </div>
-                
-            </div>
 
     </body>
 </html>
