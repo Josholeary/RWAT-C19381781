@@ -1,7 +1,7 @@
 const NoResult = () => {
   return (
     <div className="noResult">
-      <tr>No result</tr>
+      <h1> No Contacts Found </h1>
     </div>
   );
 };

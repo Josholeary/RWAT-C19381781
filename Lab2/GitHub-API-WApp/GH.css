@@ -1,0 +1,36 @@
+body {
+    background-color: #202124;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.search {
+    margin: 3%;
+}
+
+.search input {
+    font-size: 120%;
+    width: 40%;
+}
+
+.search button {
+    font-size: 120%;
+}
+
+.tab {
+    display: inline-block;
+    min-height: 500px;
+    min-width: 300px;
+    margin: 2%;
+}
+
+.tab img {
+    height: auto;
+    width: auto;
+}
+
+.tab tr, td {
+    border: 1px whitesmoke solid;
+    min-height: 500px;
+    min-width: 300px;
+}

@@ -1,10 +1,8 @@
 import { useState } from "react";
 import ContactRow from "./ContactRow";
-import NoResult from "./NoResult";
 
-const ContactTable = ({ contacts }) => {
+const ContactTable = ({ contacts, errorHandler, noErrorHandler }) => {
   const [search, setSearch] = useState("");
-  const [noResult, setNoResult] = useState(false);
 
   const searchHandler = (event) => {
     setSearch(event.target.value);
@@ -15,6 +13,14 @@ const ContactTable = ({ contacts }) => {
   filterContacts = filterContacts.filter((filterContacts) =>
     filterContacts.cnumber.includes(search)
   );
+
+  if (filterContacts.length === 0) {
+    errorHandler();
+  }
+
+  if (filterContacts.length > 0) {
+    noErrorHandler();
+  }
 
   return (
     <div>
@@ -35,18 +41,14 @@ const ContactTable = ({ contacts }) => {
             <th>Mobile</th>
             <th>Email</th>
           </tr>
-          {noResult ? (
-            <NoResult />
-          ) : (
-            filterContacts.map((filterContacts) => (
-              <ContactRow
-                id={filterContacts.id}
-                cname={filterContacts.cname}
-                cnumber={filterContacts.cnumber}
-                cmail={filterContacts.cmail}
-              />
-            ))
-          )}
+          {filterContacts.map((filterContacts) => (
+            <ContactRow
+              id={filterContacts.id}
+              cname={filterContacts.cname}
+              cnumber={filterContacts.cnumber}
+              cmail={filterContacts.cmail}
+            />
+          ))}
         </table>
       </div>
     </div>
