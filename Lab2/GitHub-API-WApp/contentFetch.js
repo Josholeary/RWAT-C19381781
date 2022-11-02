@@ -35,7 +35,7 @@ function render(uData, rData, gData) {
   document.getElementById("name").innerHTML = uData.name;
   document.getElementById("profilePic").src = uData.avatar_url;
   document.getElementById("location").innerHTML = " " + uData.location;
-  document.getElementById("email").innerHTML = uData.email;
+  document.getElementById("email").innerHTML = uData.email; //email is unavailable as it is private data on the API
   document.getElementById("gists").innerHTML = gData.length;
   document.getElementById("uname").innerHTML = uData.login;
   let table = document.getElementById("repoTable");

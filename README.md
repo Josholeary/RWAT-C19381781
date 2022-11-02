@@ -17,3 +17,5 @@ https://github.com/Josholeary/RWAT-C19381781
 ## Lab2:
 
 - Phone Directory using React allowing users to add contacts and search for them
+- API fetching js program that filters titles and uses a word frequency counter for the body
+- GitHub API web application for searching users and their repos
